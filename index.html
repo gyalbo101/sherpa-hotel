@@ -8,7 +8,7 @@
 <meta property="og:title" content="Sherpa Hotel, Thulo Bharkhu, Rasuwa">
 <meta property="og:description" content="Family-run Sherpa teahouse at the Thulo Bharkhu trailhead. The scenic route to Gosainkunda starts at our door.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#1f3a3d">
+<meta name="theme-color" content="#0b3c6e">
 
 <!-- Structured data: tells Google & AI assistants this is a hotel, where it is, how to call -->
 <script type="application/ld+json">
@@ -38,8 +38,9 @@
 
 <style>
   :root{
-    --ink:#1d2622; --muted:#5b6862; --bg:#f7f3ec; --card:#fffdf9;
-    --pine:#1f3a3d; --pine-2:#2f5a57; --saffron:#c8792b; --line:#e4dccf;
+    --ink:#0f2a44; --muted:#4f6478; --bg:#f6f8fb; --card:#ffffff;
+    --pine:#0b3c6e; --pine-2:#1f5fae; --saffron:#1f6fd1; --line:#dbe4ee;
+    --sky:#e8f1fa; --foam:#bfe0ff;
     --radius:14px;
   }
   *{box-sizing:border-box}
@@ -56,7 +57,7 @@
   .lead{font-size:1.1rem;color:var(--muted);max-width:60ch}
 
   /* top bar */
-  header.bar{position:sticky;top:0;z-index:10;background:rgba(247,243,236,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  header.bar{position:sticky;top:0;z-index:10;background:rgba(246,248,251,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
   header.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
   .brand{font-family:Georgia,serif;font-weight:700;font-size:1.15rem;color:var(--pine);text-decoration:none}
   .brand small{display:block;font:500 .7rem system-ui,sans-serif;color:var(--muted);letter-spacing:.06em}
@@ -68,16 +69,17 @@
     font-weight:650;text-decoration:none;border:2px solid transparent;font-size:1rem}
   .btn-primary{background:var(--saffron);color:#fff}
   .btn-ghost{border-color:currentColor;color:#fff}
+  .btn-light{background:#fff;color:var(--pine)}
   .btn-dark{background:var(--pine);color:#fff}
 
   /* hero */
-  .hero{position:relative;color:#fff;background:linear-gradient(180deg,#2f5a57 0%,#1f3a3d 70%);overflow:hidden}
+  .hero{position:relative;color:#fff;background:linear-gradient(180deg,#2a7fc1 0%,#0b3c6e 85%);overflow:hidden}
   .hero .wrap{position:relative;z-index:2;padding-top:72px;padding-bottom:180px}
   .hero h1{font-size:clamp(2.1rem,6.5vw,3.6rem);max-width:16ch}
   .hero p{font-size:1.15rem;max-width:48ch;opacity:.92}
   .hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
   .hero .facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:28px;font-size:.92rem;opacity:.9;padding:0;list-style:none}
-  .hero .facts li::before{content:"✓ ";color:#f2b66d}
+  .hero .facts li::before{content:"✓ ";color:var(--foam)}
   .ridge{position:absolute;left:0;right:0;bottom:-1px;z-index:1}
 
   /* route feature */
@@ -87,8 +89,8 @@
   .path{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
   .path.ours{border:2px solid var(--saffron)}
   .path h3{font-size:1.1rem;margin-bottom:.3em}
-  .path .tag{display:inline-block;font-size:.75rem;font-weight:700;padding:2px 10px;border-radius:999px;background:#f3e3cf;color:#8a4f15;margin-bottom:8px}
-  .path.theirs .tag{background:#ebe7e0;color:var(--muted)}
+  .path .tag{display:inline-block;font-size:.75rem;font-weight:700;padding:2px 10px;border-radius:999px;background:#e3efff;color:#0b4f9c;margin-bottom:8px}
+  .path.theirs .tag{background:#eef1f5;color:var(--muted)}
   .path p{margin:0;color:var(--muted)}
 
   /* cards grid */
@@ -96,11 +98,11 @@
   .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
   .card h3{font-size:1.15rem}
   .card p{margin:0;color:var(--muted)}
-  .icon{width:40px;height:40px;border-radius:10px;background:#e9f0ec;display:grid;place-items:center;margin-bottom:12px;font-size:1.25rem}
+  .icon{width:40px;height:40px;border-radius:10px;background:var(--sky);display:grid;place-items:center;margin-bottom:12px;font-size:1.25rem}
 
   /* road status */
-  .status{display:flex;gap:16px;align-items:flex-start;background:#fff6e8;border:1px solid #efd4ac;border-radius:var(--radius);padding:18px 20px;margin-top:20px}
-  .status .dot{width:12px;height:12px;border-radius:50%;background:var(--saffron);margin-top:8px;flex:none;box-shadow:0 0 0 5px rgba(200,121,43,.18)}
+  .status{display:flex;gap:16px;align-items:flex-start;background:#eef6ff;border:1px solid #c9def5;border-radius:var(--radius);padding:18px 20px;margin-top:20px}
+  .status .dot{width:12px;height:12px;border-radius:50%;background:var(--saffron);margin-top:8px;flex:none;box-shadow:0 0 0 5px rgba(31,111,209,.18)}
   .status b{display:block}
   .status small{color:var(--muted)}
 
@@ -111,12 +113,12 @@
 
   .two{display:grid;gap:28px;grid-template-columns:1fr}
   @media(min-width:860px){.two{grid-template-columns:1fr 1fr}}
-  .map{border:0;width:100%;height:340px;border-radius:var(--radius);background:#e7e2d8}
+  .map{border:0;width:100%;height:340px;border-radius:var(--radius);background:var(--sky)}
 
   .band{background:var(--pine);color:#fff;border-top:0}
-  .band .lead{color:#d9e4df}
+  .band .lead{color:#d6e6f7}
   .band .card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16)}
-  .band .card p{color:#d0dcd6}
+  .band .card p{color:#cfe0f3}
 
   footer{padding:32px 0 96px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
 
@@ -143,11 +145,11 @@
 <!-- HERO -->
 <section class="hero" id="top" style="border-top:0;padding:0">
   <div class="wrap">
-    <div class="eyebrow" style="color:#f2b66d">Family-run for over 20 years</div>
+    <div class="eyebrow" style="color:var(--foam)">Family-run for over 20 years</div>
     <h1>The scenic route to Gosainkunda starts at our door.</h1>
     <p>A Sherpa family teahouse on the Pasang Lhamu Highway at Thulo Bharkhu, Rasuwa, and the trailhead for Gosainkunda, Brabal, Thulo Syabru and the Langtang Valley.</p>
     <div class="ctas">
-      <a class="btn btn-primary" href="tel:+9779869031920">📞 Call +977 986-9031920</a>
+      <a class="btn btn-light" href="tel:+9779869031920">📞 Call +977 986-9031920</a>
       <a class="btn btn-ghost" href="#route">See the route</a>
     </div>
     <ul class="facts">
@@ -161,9 +163,9 @@
   </div>
   <!-- simple mountain ridge illustration (no image download = fast on mobile data) -->
   <svg class="ridge" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
-    <path fill="#3c6b66" opacity=".55" d="M0 150 L160 70 L260 120 L420 30 L560 110 L700 50 L860 130 L1010 40 L1160 120 L1300 60 L1440 110 V220 H0Z"/>
-    <path fill="#e9eee9" d="M420 30 L455 52 L440 50 L425 62 L410 48 L395 52Z M1010 40 L1045 62 L1028 60 L1012 72 L998 58 L982 62Z"/>
-    <path fill="#f7f3ec" d="M0 190 L120 150 L240 175 L380 130 L520 170 L680 140 L820 175 L980 135 L1120 170 L1280 145 L1440 165 V220 H0Z"/>
+    <path fill="#5aa3dc" opacity=".55" d="M0 150 L160 70 L260 120 L420 30 L560 110 L700 50 L860 130 L1010 40 L1160 120 L1300 60 L1440 110 V220 H0Z"/>
+    <path fill="#ffffff" d="M420 30 L455 52 L440 50 L425 62 L410 48 L395 52Z M1010 40 L1045 62 L1028 60 L1012 72 L998 58 L982 62Z"/>
+    <path fill="#f6f8fb" d="M0 190 L120 150 L240 175 L380 130 L520 170 L680 140 L820 175 L980 135 L1120 170 L1280 145 L1440 165 V220 H0Z"/>
   </svg>
 </section>
 
@@ -282,7 +284,7 @@
 <!-- PARTNERS -->
 <section class="band">
   <div class="wrap">
-    <div class="eyebrow" style="color:#f2b66d">For guides, agencies &amp; work crews</div>
+    <div class="eyebrow" style="color:var(--foam)">For guides, agencies &amp; work crews</div>
     <h2>Bring your group. We'll look after you.</h2>
     <p class="lead">Since the flood closed the Syabrubesi side, agencies are rerouting Langtang and Gosainkunda treks through Dhunche. Thulo Bharkhu is the natural first night.</p>
     <div class="grid">
@@ -299,7 +301,7 @@
         <p>Monthly rates with meals for road, hydropower and relief teams working in Rasuwa.</p>
       </div>
     </div>
-    <p style="margin-top:24px"><a class="btn btn-primary" href="tel:+9779869031920">Call to arrange a group</a></p>
+    <p style="margin-top:24px"><a class="btn btn-light" href="tel:+9779869031920">Call to arrange a group</a></p>
   </div>
 </section>
 
